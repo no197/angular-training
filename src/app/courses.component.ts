@@ -17,6 +17,8 @@ import { Component } from '@angular/core';
     </tr>
     </table>
 
+    <input (keyup.enter)="onKeyUp()"/>
+
     <button
     (click)="onSave($event)"
     class="btn btn-primary m-5"
@@ -40,6 +42,10 @@ export class CoursesComponent {
 
   onSave($event) {
     console.log("Clicked button!", $event);
+  }
+
+  onKeyUp($event) {
+    console.log("Enter was pressed!")
   }
 
   getTitle() {

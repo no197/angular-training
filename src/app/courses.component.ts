@@ -16,6 +16,8 @@ import { Component } from '@angular/core';
     <td [attr.colspan]="colSpan">123</td>
     </tr>
     </table>
+
+    <button class="btn btn-primary m-5" [class.active]="isActive">Please click me</button>
   `
 })
 export class CoursesComponent {
@@ -23,6 +25,7 @@ export class CoursesComponent {
   number = 1;
   imageUrl = "https://picsum.photos/200/300";
   colSpan = 2;
+  isActive = true;
   courses;
   constructor(service: CourseService){
     this.courses = service.getCouses()

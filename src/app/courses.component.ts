@@ -17,7 +17,8 @@ import { Component } from '@angular/core';
     </tr>
     </table>
 
-    <input #email (keyup.enter)="onKeyUp(email.value)"/>
+    <input [value]="email" (keyup.enter)="email = $event.target.value; onKeyUp()"/>
+    <input [(ngModel)]="password" (keyup.enter)="onKeyUp()"/>
 
     <button
     (click)="onSave($event)"
@@ -36,6 +37,8 @@ export class CoursesComponent {
   colSpan = 2;
   isActive = true;
   courses;
+  email: string = "me@example.com";
+  password = "123456";
   constructor(service: CourseService) {
     this.courses = service.getCouses()
   }
@@ -44,8 +47,9 @@ export class CoursesComponent {
     console.log("Clicked button!", $event);
   }
 
-  onKeyUp(email) {
-    console.log(email)
+  onKeyUp() {
+    console.log("email" + this.email);
+    console.log("pass" + this.password);
   }
 
   getTitle() {

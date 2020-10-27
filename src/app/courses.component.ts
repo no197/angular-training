@@ -12,7 +12,7 @@ import { Component } from '@angular/core';
 export class CoursesComponent {
   title="List of the courses";
   number = 1;
-  courses = ["course1", "course2", "course3"];
+  courses;
 
   getTitle(){
     return this.title;

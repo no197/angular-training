@@ -28,6 +28,12 @@ import { Component } from '@angular/core';
       Please click me
     </button>
 
+    <br/>
+    {{course.title | uppercase | lowercase }} <br/>
+    {{course.numOfStudent | number}} <br/>
+    {{course.rating | number: '1.1-1'}}
+    {{course.price | currency: 'AUD': true}}
+
   `
 })
 export class CoursesComponent {
@@ -39,6 +45,15 @@ export class CoursesComponent {
   courses;
   email: string = "me@example.com";
   password = "123456";
+
+  course = {
+    title: "Machine Learning course",
+    numOfStudent: 15000,
+    rating: 4.5782,
+    price: 28.99,
+    releaseDate: new Date(2020, 10, 10)
+
+  }
   constructor(service: CourseService) {
     this.courses = service.getCouses()
   }

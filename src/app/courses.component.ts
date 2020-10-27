@@ -17,21 +17,21 @@ import { Component } from '@angular/core';
     </tr>
     </table>
 
-    <button class="btn btn-primary m-5" [class.active]="isActive">Please click me</button>
+    <button class="btn btn-primary m-5" [style.color]="isActive ? 'red' : 'yellow'" [class.active]="isActive">Please click me</button>
   `
 })
 export class CoursesComponent {
-  title="List of the courses";
+  title = "List of the courses";
   number = 1;
   imageUrl = "https://picsum.photos/200/300";
   colSpan = 2;
   isActive = true;
   courses;
-  constructor(service: CourseService){
+  constructor(service: CourseService) {
     this.courses = service.getCouses()
   }
 
-  getTitle(){
+  getTitle() {
     return this.title;
   }
 }

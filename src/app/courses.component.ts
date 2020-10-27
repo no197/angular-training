@@ -17,7 +17,14 @@ import { Component } from '@angular/core';
     </tr>
     </table>
 
-    <button class="btn btn-primary m-5" [style.color]="isActive ? 'red' : 'yellow'" [class.active]="isActive">Please click me</button>
+    <button
+    (click)="onSave($event)"
+    class="btn btn-primary m-5"
+    [style.color]="isActive ? 'red' : 'yellow'"
+    [class.active]="isActive">
+      Please click me
+    </button>
+
   `
 })
 export class CoursesComponent {
@@ -29,6 +36,10 @@ export class CoursesComponent {
   courses;
   constructor(service: CourseService) {
     this.courses = service.getCouses()
+  }
+
+  onSave($event) {
+    console.log("Clicked button!", $event);
   }
 
   getTitle() {

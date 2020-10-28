@@ -1,3 +1,4 @@
+import { SummaryPipe } from './summary.pipe';
 import { CourseService } from './courses.service';
 import { CoursesComponent } from './courses.component';
 import { BrowserModule } from '@angular/platform-browser';
@@ -15,7 +16,8 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     CoursesComponent,
     CourseComponent,
-    AuthorComponent
+    AuthorComponent,
+    SummaryPipe
   ],
   imports: [
     BrowserModule,

@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./toggle-button.component.scss']
 })
 export class ToggleButtonComponent implements OnInit {
-  @Input() isSuccess: boolean;
+  @Input("is-favourite") isSuccess: boolean;
 
   onClick() {
     this.isSuccess = !this.isSuccess;

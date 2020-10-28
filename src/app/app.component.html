@@ -3,4 +3,7 @@
 <app-course></app-course>
 <app-author></app-author> -->
 <!-- <title-case></title-case> -->
-<toggle-button [is-favourite]="isSuccess"></toggle-button>
+<toggle-button
+  [is-favourite]="isSuccess"
+  (change)="buttonChanged()"
+></toggle-button>

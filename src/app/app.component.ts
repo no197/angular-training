@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'hello-word';
   isSuccess = true;
+
+  buttonChanged() {
+    console.log("Button changed!")
+  }
 }

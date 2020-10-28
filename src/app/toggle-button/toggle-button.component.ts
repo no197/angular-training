@@ -11,7 +11,7 @@ export class ToggleButtonComponent implements OnInit {
 
   onClick() {
     this.isSuccess = !this.isSuccess;
-    this.change.emit();
+    this.change.emit({ newValue: this.isSuccess });
   }
   constructor() { }
 

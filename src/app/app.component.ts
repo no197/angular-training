@@ -9,7 +9,7 @@ export class AppComponent {
   title = 'hello-word';
   isSuccess = true;
 
-  buttonChanged() {
-    console.log("Button changed!")
+  buttonChanged(newValue) {
+    console.log("Button changed!", newValue)
   }
 }

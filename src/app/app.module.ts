@@ -12,6 +12,7 @@ import { AuthorComponent } from './author/author.component';
 import { AuthorService } from './author/author.service';
 import { FormsModule } from '@angular/forms';
 import { TitleCaseComponent } from './title-case/title-case.component';
+import { ToggleButtonComponent } from './toggle-button/toggle-button.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { TitleCaseComponent } from './title-case/title-case.component';
     AuthorComponent,
     SummaryPipe,
     TitleCaseComponent,
-    TitleCasePipe
+    TitleCasePipe,
+    ToggleButtonComponent
   ],
   imports: [
     BrowserModule,

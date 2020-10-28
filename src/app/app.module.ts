@@ -1,3 +1,4 @@
+import { TitleCasePipe } from './titlecase.pipe';
 import { SummaryPipe } from './summary.pipe';
 import { CourseService } from './courses.service';
 import { CoursesComponent } from './courses.component';
@@ -10,6 +11,7 @@ import { CourseComponent } from './course/course.component';
 import { AuthorComponent } from './author/author.component';
 import { AuthorService } from './author/author.service';
 import { FormsModule } from '@angular/forms';
+import { TitleCaseComponent } from './title-case/title-case.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { FormsModule } from '@angular/forms';
     CoursesComponent,
     CourseComponent,
     AuthorComponent,
-    SummaryPipe
+    SummaryPipe,
+    TitleCaseComponent,
+    TitleCasePipe
   ],
   imports: [
     BrowserModule,

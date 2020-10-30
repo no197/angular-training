@@ -6,6 +6,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   // template: '',
 
   styleUrls: ['./toggle-button.component.scss']
+  //styles: [`style here`]
 })
 export class ToggleButtonComponent implements OnInit {
   @Input("is-favourite") isSuccess: boolean;

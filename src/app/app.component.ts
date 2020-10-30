@@ -14,6 +14,20 @@ export class AppComponent {
     { id: 4, name: "Course 4" }
   ]
   viewMode = "map"
+
+  addCourse() {
+    if (!this.courses.length) {
+      this.courses.push({ id: 1, name: "Course 1" });
+      return;
+    }
+    let maxId = Math.max(...this.courses.map(item => item.id));
+    let newId = maxId + 1;
+    this.courses.push({ id: newId, name: `Course ${newId}` })
+  }
+
+  onDelete(id) {
+    this.courses = this.courses.filter(item => item.id != id);
+  }
 }
 
 interface Course {

@@ -13,6 +13,7 @@ import { AuthorService } from './author/author.service';
 import { FormsModule } from '@angular/forms';
 import { TitleCaseComponent } from './title-case/title-case.component';
 import { ToggleButtonComponent } from './toggle-button/toggle-button.component';
+import { BoostrapPanelComponent } from './boostrap-panel/boostrap-panel.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ToggleButtonComponent } from './toggle-button/toggle-button.component';
     SummaryPipe,
     TitleCaseComponent,
     TitleCasePipe,
-    ToggleButtonComponent
+    ToggleButtonComponent,
+    BoostrapPanelComponent
   ],
   imports: [
     BrowserModule,

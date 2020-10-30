@@ -7,6 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'hello-word';
-  courses: number[] = []
+  courses: Course[] = [
+    { id: 1, name: "Course 1" },
+    { id: 2, name: "Course 2" },
+    { id: 3, name: "Course 3" },
+    { id: 4, name: "Course 4" }
+  ]
   viewMode = "map"
+}
+
+interface Course {
+  id: number,
+  name: string
 }

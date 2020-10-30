@@ -24,3 +24,9 @@
     <div *ngSwitchDefault>Otherwise</div>
   </div>
 </div>
+
+<ul>
+  <li *ngFor="let course of courses; even as isEven">
+    {{ course.name }} <span *ngIf="isEven"> Discount 20%</span>
+  </li>
+</ul>

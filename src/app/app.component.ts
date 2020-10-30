@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'hello-word';
   courses: number[] = []
+  viewMode = "map"
 }

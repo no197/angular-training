@@ -7,7 +7,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class ToggleButtonComponent implements OnInit {
   @Input("is-favourite") isSuccess: boolean;
-  @Output() change = new EventEmitter();
+  @Output("change") change = new EventEmitter();
 
   onClick() {
     this.isSuccess = !this.isSuccess;

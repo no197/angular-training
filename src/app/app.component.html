@@ -11,3 +11,8 @@
 </div>
 <ng-template #coursesList>List of the course</ng-template>
 <ng-template #noCourses>No courses yet</ng-template>
+<hr />
+
+<div [hidden]="courses.length > 0">List of the course</div>
+<div [hidden]="courses.length === 0">No courses yet</div>
+<hr />

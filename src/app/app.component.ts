@@ -1,3 +1,4 @@
+import { ILike } from './like/like.component';
 import { Component } from '@angular/core';
 
 @Component({
@@ -8,6 +9,14 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'hello-word';
   isSuccess = true;
+  tweet = {
+    isLiked: false,
+    likeCount: 0
+  }
+
+  onChange(newValue: ILike) {
+    this.tweet = newValue;
+  }
 
   buttonChanged(newValue) {
     console.log("Button changed!", newValue)

@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { TitleCaseComponent } from './title-case/title-case.component';
 import { ToggleButtonComponent } from './toggle-button/toggle-button.component';
 import { BoostrapPanelComponent } from './boostrap-panel/boostrap-panel.component';
+import { LikeComponent } from './like/like.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { BoostrapPanelComponent } from './boostrap-panel/boostrap-panel.componen
     TitleCaseComponent,
     TitleCasePipe,
     ToggleButtonComponent,
-    BoostrapPanelComponent
+    BoostrapPanelComponent,
+    LikeComponent
   ],
   imports: [
     BrowserModule,

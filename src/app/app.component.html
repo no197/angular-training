@@ -22,3 +22,10 @@
     <a href="#" class="card-link">Another link</a>
   </ng-container>
 </boostrap-panel>
+
+<app-like
+  [likeCount]="tweet.likeCount"
+  [isActive]="tweet.isLiked"
+  (change)="onChange($event)"
+>
+</app-like>

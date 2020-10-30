@@ -27,7 +27,10 @@
 
 <ul>
   <button (click)="addCourse()" class="btn btn-sm btn-primary">Add</button>
-  <li *ngFor="let course of courses; even as isEven">
+  <button (click)="resetCourses()" class="btn btn-sm btn-success ml-2">
+    Reset
+  </button>
+  <li *ngFor="let course of courses; trackBy: courseTrack">
     {{ course.name }}
     <button (click)="onDelete(course.id)" class="btn btn-sm btn-danger m-2">
       Delete

@@ -15,6 +15,13 @@ export class AppComponent {
   ]
   viewMode = "map"
 
+  resetCourses() {
+    this.courses = [
+      { id: 1, name: "Course 1" },
+      { id: 2, name: "Course 2" },
+      { id: 3, name: "Course 3" },
+    ]
+  }
   addCourse() {
     if (!this.courses.length) {
       this.courses.push({ id: 1, name: "Course 1" });
@@ -27,6 +34,10 @@ export class AppComponent {
 
   onDelete(id) {
     this.courses = this.courses.filter(item => item.id != id);
+  }
+
+  courseTrack(index, course) {
+    return course ? course.id : undefined;
   }
 }
 

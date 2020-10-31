@@ -13,7 +13,14 @@ export class AppComponent {
     { id: 3, name: "Course 3" },
     { id: 4, name: "Course 4" }
   ]
-  viewMode = "map"
+  viewMode = "map";
+
+  task = {
+    title: "Angular for me",
+    assignment: {
+      name: "John Cena"
+    }
+  }
 
   resetCourses() {
     this.courses = [

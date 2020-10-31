@@ -11,5 +11,7 @@ export class FormsComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  log(x) {
+    console.log(x);
+  }
 }

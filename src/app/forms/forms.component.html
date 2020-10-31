@@ -67,6 +67,18 @@
         Subcribe new comment
       </label>
     </div>
+
+    <div *ngFor="let item of contactMethod" class="radio">
+      <input
+        ngModel
+        type="radio"
+        name="contactBy"
+        id="contactBy"
+        [value]="item.id"
+      />
+      <label for="contactBy">{{ item.name }}</label>
+    </div>
+
     <button class="btn btn-primary mt-2" [disabled]="!f.valid" type="submit">
       Submit
     </button>

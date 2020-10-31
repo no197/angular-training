@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormsComponent implements OnInit {
 
+  contactMethod = [{ id: 1, name: "Mail" }, { id: 2, name: "Phone" }]
   constructor() { }
 
   ngOnInit(): void {

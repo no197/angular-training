@@ -1,0 +1,12 @@
+<div class="zippy">
+  <div class="zippy-heading" [class.expanded]="isExpanded" (click)="onClick()">
+    {{ title }}
+    <i
+      class="fas"
+      [ngClass]="{ 'fa-chvron-down': !isExpanded, 'fa-chvron-up': isExpanded }"
+    ></i>
+  </div>
+  <div class="zippy-body" *ngIf="isExpanded">
+    <ng-content></ng-content>
+  </div>
+</div>

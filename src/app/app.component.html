@@ -12,6 +12,8 @@
       <a
         class="nav-link"
         [class.active]="viewMode === 'list'"
+        [ngClass]="{ class: true }"
+        [ngStyle]="{ color: 'black' }"
         (click)="viewMode = 'list'"
         >List View</a
       >

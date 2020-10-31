@@ -1,5 +1,5 @@
 <div class="container">
-  <form>
+  <form #f="ngForm" (ngSubmit)="submitForm(f)">
     <div class="form-group">
       <label for="name">Name</label>
       <input

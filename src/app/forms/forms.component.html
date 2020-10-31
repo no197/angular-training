@@ -4,6 +4,7 @@
       <label for="name">Name</label>
       <input
         ngModel
+        required
         name="name"
         #name="ngModel"
         (change)="log(name)"
@@ -11,6 +12,9 @@
         class="form-control"
         id="name"
       />
+      <div *ngIf="name.touched && !name.valid" class="alert alert-danger">
+        Name is required
+      </div>
     </div>
 
     <div class="form-group">

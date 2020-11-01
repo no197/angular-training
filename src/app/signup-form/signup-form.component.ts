@@ -18,6 +18,10 @@ export class SignupFormComponent implements OnInit {
     password: new FormControl('', Validators.required)
   })
 
+  login() {
+    this.form.setErrors({ inValidLogin: true })
+  }
+
   get username() {
     return this.form.get('username')
   }

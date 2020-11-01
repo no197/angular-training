@@ -8,8 +8,9 @@
         id="username"
         placeholder="Enter username"
       />
+      <div *ngIf="username.pending">Checking for uniquess...</div>
       <div
-        *ngIf="!username.valid && username.touched"
+        *ngIf="!username.pending && !username.valid && username.touched"
         class="alert alert-danger"
       >
         <div *ngIf="username.errors?.required">Username is required</div>

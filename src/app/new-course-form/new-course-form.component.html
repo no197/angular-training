@@ -1,0 +1,20 @@
+<div class="container mt-5">
+  <form>
+    <input
+      type="text"
+      class="form-control"
+      type="text"
+      #topic
+      (keyup.enter)="addTopic(topic)"
+    />
+    <div class="list-group mt-5">
+      <a
+        (click)="deleteTopic(item)"
+        *ngFor="let item of form.get('topics')['controls']"
+        class="list-group-item list-group-item-action"
+      >
+        {{ item.value }}
+      </a>
+    </div>
+  </form>
+</div>

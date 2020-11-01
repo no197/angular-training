@@ -3,43 +3,44 @@
     <div *ngIf="form.errors?.inValidLogin" class="alert alert-danger">
       Username or password is not true
     </div>
-    <div class="form-group">
-      <label for="username">Username</label>
-      <input
-        formControlName="username"
-        class="form-control"
-        id="username"
-        placeholder="Enter username"
-      />
-      <div *ngIf="username.pending">Checking for uniquess...</div>
-      <div
-        *ngIf="!username.pending && !username.valid && username.touched"
-        class="alert alert-danger"
-      >
-        <div *ngIf="username.errors?.required">Username is required</div>
-        <div *ngIf="username.errors?.canNotContainSpace">
-          Username can't contain space
-        </div>
-        <div *ngIf="username.errors?.shouldBeUnique">
-          Username should be unique
-        </div>
-        <div *ngIf="username.errors?.minlength">
-          Username is should minimum
-          {{ username.errors.minlength?.requiredLength || 3 }} characters
+    <div formGroupName="account">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input
+          formControlName="username"
+          class="form-control"
+          id="username"
+          placeholder="Enter username"
+        />
+        <div *ngIf="username.pending">Checking for uniquess...</div>
+        <div
+          *ngIf="!username.pending && !username.valid && username.touched"
+          class="alert alert-danger"
+        >
+          <div *ngIf="username.errors?.required">Username is required</div>
+          <div *ngIf="username.errors?.canNotContainSpace">
+            Username can't contain space
+          </div>
+          <div *ngIf="username.errors?.shouldBeUnique">
+            Username should be unique
+          </div>
+          <div *ngIf="username.errors?.minlength">
+            Username is should minimum
+            {{ username.errors.minlength?.requiredLength || 3 }} characters
+          </div>
         </div>
       </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input
+          formControlName="password"
+          type="password"
+          class="form-control"
+          id="exampleInputPassword1"
+          placeholder="Password"
+        />
+      </div>
     </div>
-    <div class="form-group">
-      <label for="exampleInputPassword1">Password</label>
-      <input
-        formControlName="password"
-        type="password"
-        class="form-control"
-        id="exampleInputPassword1"
-        placeholder="Password"
-      />
-    </div>
-
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 </div>

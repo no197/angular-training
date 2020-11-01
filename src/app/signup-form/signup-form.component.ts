@@ -10,12 +10,15 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class SignupFormComponent implements OnInit {
 
   form = new FormGroup({
-    username: new FormControl('', [
-      Validators.required,
-      Validators.minLength(3),
-      UsernameValidators.canNotContainSpace
-    ], UsernameValidators.shoudBeUnique),
-    password: new FormControl('', Validators.required)
+    account: new FormGroup({
+      username: new FormControl('', [
+        Validators.required,
+        Validators.minLength(3),
+        UsernameValidators.canNotContainSpace
+      ], UsernameValidators.shoudBeUnique),
+      password: new FormControl('', Validators.required)
+    }),
+
   })
 
   login() {
@@ -23,11 +26,11 @@ export class SignupFormComponent implements OnInit {
   }
 
   get username() {
-    return this.form.get('username')
+    return this.form.get('account.username')
   }
 
   get password() {
-    return this.form.get('password')
+    return this.form.get('account.password')
   }
   constructor() { }
 

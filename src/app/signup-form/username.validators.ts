@@ -1,4 +1,6 @@
 import { AbstractControl, ValidationErrors } from '@angular/forms';
+import { rejects } from 'assert';
+import { resolve } from 'dns';
 
 export class UsernameValidators {
   static canNotContainSpace(control: AbstractControl): ValidationErrors | null {
@@ -6,5 +8,17 @@ export class UsernameValidators {
       return { canNotContainSpace: true }
     }
     return null;
+  }
+  static shoudBeUnique(control: AbstractControl): Promise<ValidationErrors | null> {
+    return new Promise((resolve, rejects) => {
+      setTimeout(() => {
+        console.log("oke");
+        if (control.value === 'Yen')
+          resolve({ shouldBeUnique: true })
+        else resolve(null);
+      }, 2000);
+    })
+
+
   }
 }

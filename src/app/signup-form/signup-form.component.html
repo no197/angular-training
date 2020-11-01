@@ -12,13 +12,16 @@
         *ngIf="!username.valid && username.touched"
         class="alert alert-danger"
       >
-        <div *ngIf="username.errors.required">Username is required</div>
-        <div *ngIf="username.errors.canNotContainSpace">
+        <div *ngIf="username.errors?.required">Username is required</div>
+        <div *ngIf="username.errors?.canNotContainSpace">
           Username can't contain space
         </div>
-        <div *ngIf="username.errors.minlength">
+        <div *ngIf="username.errors?.shouldBeUnique">
+          Username should be unique
+        </div>
+        <div *ngIf="username.errors?.minlength">
           Username is should minimum
-          {{ username.errors.minlength.requiredLength }} characters
+          {{ username.errors.minlength?.requiredLength || 3 }} characters
         </div>
       </div>
     </div>
